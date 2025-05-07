@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
@@ -18,6 +20,14 @@ public class Main {
         Thread.sleep(1000);
         //        driver.close();
        try {
+           //Number of Elements
+           //input elements
+           List <WebElement>inputElements = driver.findElements(By.tagName("input"));
+           System.out.println(inputElements.size());
+           for (WebElement element : inputElements) {
+               System.out.println("Paragraph text:" + element.getAttribute("class"));
+           }
+
            WebElement emailField = driver.findElement(By.xpath("//input[@name='email']"));
            System.out.println(emailField.isDisplayed());
            emailField.sendKeys("priti..");
