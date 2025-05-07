@@ -23,7 +23,7 @@ public class Main {
            //Number of Elements
            //input elements
            List <WebElement>inputElements = driver.findElements(By.tagName("input"));
-           System.out.println(inputElements.size());
+           System.out.println("input elements = " + inputElements.size());
            for (WebElement element : inputElements) {
                System.out.println("Paragraph text:" + element.getAttribute("class"));
            }
