@@ -15,9 +15,9 @@ public class HomePage extends BasePage{
             super(driver);
         }
 @FindBy(xpath = "xpath")
-WebElement lnkmyAccount;
+WebElement linkmyAccount;
 public void clickMyAccount(){
-    lnkmyAccount.click();
+    linkmyAccount.click();
 }
 
     }
